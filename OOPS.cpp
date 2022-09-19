@@ -106,7 +106,7 @@ float rectangle::perimeter(){ // Scope resolution shows that the scope of perime
 };*/
 
 
-// Add two complex number
+// Class for Add two complex number
 /*class Complex{
     private:
         int a;
@@ -126,6 +126,52 @@ float rectangle::perimeter(){ // Scope resolution shows that the scope of perime
             cout<<a<<" + "<<b<<"i";
         }
 };*/
+
+
+// Class for Operator Overloading
+/*class Complex{
+    private:
+        int a;
+        int b;
+    public:
+        Complex(int a=0, int b=0){
+            this->a = a;
+            this->b = b;
+        }
+        Complex operator + (Complex c){
+            Complex temp;
+            temp.a = a + c.a;
+            temp.b = b + c.b;
+            return temp;
+        }
+        void display(){
+            cout<<a<<" + "<<b<<"i";
+        }
+};*/
+
+
+// Class for Friend Function
+/*class Friend{
+    private:
+        int length;
+        int breadth;
+    public:
+        Friend(int l = 10, int b = 15){
+            length = l;
+            breadth = b;
+        }
+        friend int area(Friend); // The function can be defined anywhere in the program like a 
+        // normal C++ function. The function definition does not use either the keyword friend 
+        // or scope resolution operator. Also If a function is defined as a friend function in C++,
+        // then the protected and private data of a class can be accessed using the function.
+        friend void helloWorld();
+};
+int area(Friend f){  // 
+    return f.length*f.breadth; 
+}
+void helloWorld(){
+    cout<<"Hello World"<<endl;
+}*/
 
 
 int main(){
@@ -176,5 +222,19 @@ int main(){
     c2 = c.add(c1);
     c2.display();*/
 
+
+    // Operator Overloading
+    /*Complex c1(1, 2), c2(3, 4), c3;
+    c3 = c1+c2;
+    c3.display();*/
+
+
+    // Friend function
+    /*Friend f;
+    cout<<"Area: "<<area(f)<<endl;
+    helloWorld();*/
+
+
+    
     return 0;
 }
