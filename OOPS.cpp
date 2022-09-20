@@ -174,6 +174,23 @@ void helloWorld(){
 }*/
 
 
+// Class for insertion Operator Overloading
+/*class Complex{
+    private:
+        int real;
+        int img;
+    public:
+        Complex(int real=0, int img=0){
+            this->real = real;
+            this->img = img;
+        }
+        friend ostream & operator<<(ostream &out, Complex &c);
+};
+ostream & operator<<(ostream &out, Complex &c){
+    out<<c.real<<"+"<<c.img<<"i"<<endl;
+}*/
+
+
 int main(){
     // Dot Operator: Used for direct member selection via object name. 
     /*rectangle r;
@@ -235,6 +252,9 @@ int main(){
     helloWorld();*/
 
 
-    
+    // Insertion Operator Overloading
+    /*Complex c(2, 3);
+    cout<<c<<endl;*/
+
     return 0;
 }
